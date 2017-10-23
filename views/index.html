@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nutrition Calculator - UK</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>A quick & easy way to calculate nutritional information and labels for your recipes.</h1>
+            <h3>UK Food Standards Agency (FSA) Nutrient Databank (CoF IDS)</h3>
+        </div>
+        <div class="search-box">
+            <input type="text" name="" id="" placeholder="Search ingredient">
+        </div>
+        <div class="search-section group">
+            <div class="search-result">
+                <select name="result" id="search-result" size="10" pla></select>
+            </div>
+            <div class="search-selected">
+                <div class="search-selected-item">
+                    <div class="selected-ingredient"><span>&nbsp;</span></div>
+                </div>
+                <div class="item-config">
+                    <span>How much</span>
+                    <input type="text" id="qty">
+                    <button type="submit" class="add-ingredient-btn">Add ingredient</button>
+                    <span class="error-qty"></span>
+                </div>
+            </div>
+        </div>
+        <div class="recipe-section">
+            <div class="recipe-header">
+                <input type="text" name="recipe" id="user-recipe" placeholder="Name Your Recipe">
+            </div>
+            <div class="ingredient-section">
+                <ul class="ingredient-list">
+                <!--
+                    <div class="item">
+                        <div class="ingredient">
+                            <li class="ingredient-item">Lorem ipsum dolor sit amet consectetur. Culpa.</li>
+                        </div>
+                        <div class="ing-qty">50</div>
+                    </div>
+                -->
+                </ul>
+            </div>
+            <div class="clear-fix"></div>
+
+            <div class="get-nutrition-section">
+                <div class="serving-info">
+                    <span>Number of Serverings:</span>     
+                    <input type="text" id="num-of-servings">
+                    <button type="submit" class="get-nutrition">Get Nutrition</button>
+                    <span class="error-serv"></span>  
+                </div>
+            </div>
+        </div>
+
+        <div class="nutrition-facts-section">
+            <h3>Nutrition</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Typical values</th>
+                        <th>100g contains</th>
+                        <th>Each portion contains</th>
+                        <th>% RI*</th>
+                    </tr>
+                    
+                </thead>
+                
+                <tbody class="nutrition-values">
+                    <!-- <tr>
+                        <td class="compos"></td>
+                        <td class="hd"></td>
+                        <td class="portion"></td>
+                        <td class="ri"></td>
+                    </tr> -->
+                </tbody>
+            </table>
+            <div class="ri-note">*Reference intake of an average adult (8400kJ/2000kcal)</div>
+        </div>
+        <div class="recipe-info">
+        </div>
+        <div class="label">
+            <div class="label-row">
+                
+            </div>
+            <!-- <div class="pompos-label">
+                <div class="compos-name"><span>Fat</span></div>
+                <div class="compos-qty"><span>12g</span></div>
+                <div class="compos-ri"><span>21%</span></div>
+                <div class="compos-level"><span>Med</span></div>
+            </div> -->
+        </div>
+    </div>
+    <script src="/js/app.js"></script>
+</body>
+</html>
