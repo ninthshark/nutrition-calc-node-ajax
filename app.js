@@ -7,8 +7,8 @@ const Nutri = require('./models/nutrition_facts');
 const app = express();
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://test:1234abcd@ds119685.mlab.com:19685/nutris-calc', {useMongoClient:true})
-//mongoose.connect('mongodb://localhost/testJson', {useMongoClient:true})
+//mongoose.connect('mongodb://test:1234abcd@ds119685.mlab.com:19685/nutris-calc', {useMongoClient:true})
+mongoose.connect('mongodb://localhost/testJson', {useMongoClient:true})
   .then(() => { console.log('Database connected')}, err => {console.log(err)});
 
 

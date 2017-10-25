@@ -97,113 +97,8 @@ $(document).ready(function() {
             $('.error-serv').html('Please enter the proper number');
             return false;
         } else {
-
-            
             $('.error-serv').html('');
             nutritionCalculation(ingredientItem, ingredientItemQty,totalWeight,numOfServing);
-            // if (ingredientItem.length > 0) {
-            //     let userNutritionFact = nutriCal(ingredientItem, ingredientItemQty);
-            //     let hundredGContains = perHundredContains(userNutritionFact, totalWeight);
-            //     let portionContains = perPortionContains(userNutritionFact, numOfServing);
-            //     let referenceIntakes = referenceIntakesCal(userNutritionFact);
-            //     let dailyRI = dailyRIContains(referenceIntakes, numOfServing);
-            //     let nutritionData = `
-            //         <tr>
-            //             <td class="compos">Energy</td>
-            //             <td class="hd">${hundredGContains.hdKJ.toFixed(1)}kJ</td>
-            //             <td class="portion">${portionContains.ppKJ.toFixed(1)}kJ</td>
-            //             <td class="ri"></td>
-            //         </tr>
-            //         <tr>
-            //             <td class="compos"></td>
-            //             <td class="hd">${hundredGContains.hdKcal.toFixed(1)}kcal</td>
-            //             <td class="portion">${portionContains.ppKcal.toFixed(1)}kcal</td>
-            //             <td class="ri">${dailyRI.driKcal.toFixed()} %</td>
-            //         </tr>
-            //         <tr>
-            //             <td class="compos">Fat</td>
-            //             <td class="hd">${hundredGContains.hdFat.toFixed(1)}</td>
-            //             <td class="portion">${portionContains.ppFat.toFixed(1)}</td>
-            //             <td class="ri">${dailyRI.driFat.toFixed()} %</td>
-            //         </tr>
-            //         <tr>
-            //             <td class="compos">of which saturates</td>
-            //             <td class="hd">${hundredGContains.hdSat.toFixed(1)}</td>
-            //             <td class="portion">${portionContains.ppSat.toFixed(1)}</td>
-            //             <td class="ri">${dailyRI.driSat.toFixed()} %</td>
-            //         </tr>
-            //         <tr>
-            //             <td class="compos">Carbohydrate</td>
-            //             <td class="hd">${hundredGContains.hdCarb.toFixed(1)}</td>
-            //             <td class="portion">${portionContains.ppCarb.toFixed(1)}</td>
-            //             <td class="ri"></td>
-            //         </tr>
-            //         <tr>
-            //             <td class="compos">of which sugars</td>
-            //             <td class="hd">${hundredGContains.hdSugars.toFixed(1)}</td>
-            //             <td class="portion">${portionContains.ppSugars.toFixed(1)}</td>
-            //             <td class="ri">${dailyRI.driSugars.toFixed()} %</td>
-            //         </tr>
-            //         <tr>
-            //             <td class="compos">Fibre</td>
-            //             <td class="hd">${hundredGContains.hdFibre.toFixed(1)}</td>
-            //             <td class="portion">${portionContains.ppFibre.toFixed(1)}</td>
-            //             <td class="ri"></td>
-            //         </tr>
-            //         <tr>
-            //             <td class="compos">Protein</td>
-            //             <td class="hd">${hundredGContains.hdProtein.toFixed(1)}</td>
-            //             <td class="portion">${portionContains.ppProtein.toFixed(1)}</td>
-            //             <td class="ri">${dailyRI.driProtein.toFixed()} %</td>
-            //         </tr>
-            //         <tr>
-            //             <td class="compos">Salt</td>
-            //             <td class="hd">${hundredGContains.hdSalt.toFixed(1)}</td>
-            //             <td class="portion">${portionContains.ppSalt.toFixed(1)}</td>
-            //             <td class="ri">${dailyRI.driSalt.toFixed()} %</td>
-            //         </tr>
-            //     `;
-            //     let labelData = `
-            //     <div class="pompos-label">
-            //         <div class="compos-name"><span>Enery</span></div>
-            //         <div class="compos-qty"><span>${portionContains.ppKJ.toFixed(1)}kJ</span></div>
-            //         <div class="compos-qty"><span>${portionContains.ppKcal.toFixed(1)}kcal</span></div>
-            //         <div class="ri-energy"><span>${dailyRI.driKcal.toFixed()} %</span></div>
-            //     </div>
-            //     <div class="pompos-label ${labelFat(portionContains.ppFat).color}">
-            //         <div class="compos-name"><span>Fat</span></div>
-            //         <div class="compos-qty"><span>${portionContains.ppFat.toFixed(1)}g</span></div>
-            //         <div class="compos-ri"><span>${dailyRI.driFat.toFixed()}%</span></div>
-            //         <div class="compos-level"><span>${labelFat(portionContains.ppFat).level}</span></div>
-            //     </div>
-            //     <div class="pompos-label ${labelSatFat(portionContains.ppSat).color}">
-            //         <div class="compos-name"><span>Saturated</span></div>
-            //         <div class="compos-qty"><span>${portionContains.ppSat.toFixed(1)}g</span></div>
-            //         <div class="compos-ri"><span>${dailyRI.driSat.toFixed()}%</span></div>
-            //         <div class="compos-level"><span>${labelSatFat(portionContains.ppSat).level}</span></div>
-            //     </div>
-            //     <div class="pompos-label ${labelFat(portionContains.ppSugars).color}">
-            //         <div class="compos-name"><span>Sugars</span></div>
-            //         <div class="compos-qty"><span>${portionContains.ppSugars.toFixed(1)}g</span></div>
-            //         <div class="compos-ri"><span>${dailyRI.driSugars.toFixed()}%</span></div>
-            //         <div class="compos-level"><span>${labelFat(portionContains.ppSugars).level}</span></div>
-            //     </div>
-            //     <div class="pompos-label ${labelSalt(portionContains.ppSalt).color}">
-            //         <div class="compos-name"><span>Salt</span></div>
-            //         <div class="compos-qty"><span>${portionContains.ppSalt.toFixed(1)}g</span></div>
-            //         <div class="compos-ri"><span>${dailyRI.driSalt.toFixed()}%</span></div>
-            //         <div class="compos-level"><span>${labelSalt(portionContains.ppSalt).level}</span></div>
-            //     </div>
-            //     `;
-            //     let recipeInfo = `
-            //     <div>This recipe contains ${numOfServing} servings of ${(totalWeight/numOfServing).toFixed()}g each</div>
-            //     `;
-            //     $('.nutrition-values').html(nutritionData);
-            //     $('.recipe-info').html(recipeInfo);
-            //     $('.label-row').html(labelData);
-            // } else {
-            //     $('.error-serv').html('Not enough information')
-            // }           
             $('#num-of-servings').val('');  
         }
                             
@@ -220,7 +115,12 @@ $(document).ready(function() {
             ingredientItem.splice(getIngredient,1);
             ingredientItemQty.splice(getIngredient,1);
             totalWeight = ingredientItemQty.map((i) => parseFloat(i)).reduce((acc, cur) => acc + cur, 0);
-            nutritionCalculation(ingredientItem, ingredientItemQty,totalWeight,numOfServing);
+            if (isNaN(numOfServing)) {
+                return false;
+            } else {
+                nutritionCalculation(ingredientItem, ingredientItemQty,totalWeight,numOfServing);
+            }
+            
         }
     });
 
@@ -323,9 +223,13 @@ $(document).ready(function() {
                 <div class="compos-ri"><span>${dailyRI.driSalt.toFixed()}%</span></div>
                 <div class="compos-level"><span>${labelSalt(portionContains.ppSalt).level}</span></div>
             </div>
+            <div>
+                Typical value per 100g : Energy ${hundredGContains.hdKJ.toFixed(1)}kJ/${hundredGContains.hdKcal.toFixed(1)}kcal
+            </div>
             `;
             let recipeInfo = `
-            <div>This recipe contains ${numOfServing} servings of ${(totalWeight/numOfServing).toFixed()}g each</div>
+            <div>This recipe makes <span>${numOfServing}</span> servings</div>
+            <div>Each serving (${(totalWeight/numOfServing).toFixed()}g) contains</div>
             `;
             $('.nutrition-values').html(nutritionData);
             $('.recipe-info').html(recipeInfo);

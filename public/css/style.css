@@ -1,9 +1,15 @@
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+p.intro {
+    font-size: 1.5rem;
+}
 .container {
     width: 900px;
     margin: 0 auto;
 }
 .header {
-    width: 100%;
+    width: 800px;
     margin: 0 auto;
 }
 
@@ -78,7 +84,7 @@ input[type=text]:focus {
 
 /*------------Recipe Section----------------*/
 .recipe-section {
-    width: 500px;
+    width: 800px;
     border: 1px solid black;
     margin: 0 auto;
     margin-top: 10px;
@@ -114,19 +120,19 @@ input[type=text]:focus {
     padding: 5px 5px;
 }
 
-ul {
+/* ul {
     list-style-type: none;
     padding-left: 10px;
     padding-right: 10px;
 }
 li {
     padding: 7px 0;
-}
+} */
 table.ingredient-list tr {
     vertical-align: top;
 }
 table.ingredient-list tr td {
-    height: 45px;
+    height: 30px;
 }
 .ingredient-item {
     width: 85%;
@@ -181,6 +187,12 @@ th {
 }
 
 /*------------Nutrition values----------*/
+.nutrition-wrapper {
+    width: 780px;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid black;
+}
 .nutrition-facts-section {
     width: 500px;
     margin: 0 auto;
@@ -188,12 +200,13 @@ th {
 }
 
 .recipe-info {
-    width: 500px;
     margin: 0 auto;
     margin-bottom: 10px;
-    background-color: rgb(202, 202, 202);
     padding: 5px;
+    text-align: center;
+    border-radius: 5px;
 }
+
  /*---------------Label------------------*/
  .label {
     width: 500px;
@@ -242,8 +255,16 @@ th {
      background-color: rgb(255, 60, 60);
  }
 
-a:link, a:visited, a:hover, a:active {
+.btn {
     text-decoration: none;
     color: black;
     cursor: default;
+}
+.future {
+    width: 800px;
+    margin: 0 auto;
+}
+
+.section-text {
+    text-align: center;
 }
